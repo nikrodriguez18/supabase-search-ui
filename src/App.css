@@ -1,81 +1,94 @@
-.App {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #1e1e1e;
   color: white;
-  min-height: 100vh;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.search-input {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.search-button {
-  background-color: #00e676;
-  color: black;
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   border: none;
-  padding: 10px 16px;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.export-button {
-  background-color: #424242;
+  border-radius: 5px;
+  background-color: #2b2b2b;
   color: white;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  padding: 0.75rem;
   border: none;
-  padding: 10px 16px;
   font-weight: bold;
-  border-radius: 4px;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.results-table {
+button:first-child {
+  background-color: #00ff88;
+  color: black;
+}
+
+button:last-child {
+  background-color: #444;
+  color: white;
+}
+
+table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  overflow-x: auto;
 }
 
-.results-table th,
-.results-table td {
-  padding: 10px;
-  border-bottom: 1px solid #444;
+th, td {
   text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #333;
 }
 
-@media (max-width: 768px) {
-  .search-container {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 10px;
+th {
+  font-weight: bold;
+}
+
+.green-text {
+  color: #00ff88;
+}
+
+@media (min-width: 600px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
-  .search-input,
-  .search-button,
-  .export-button {
-    width: 100% !important;
-    font-size: 16px;
+  h1 {
+    font-size: 2.5rem;
   }
 
-  .results-table {
-    font-size: 12px;
-    overflow-x: auto;
-    display: block;
+  input[type="text"] {
+    font-size: 1.1rem;
   }
 
-  .results-table th,
-  .results-table td {
-    padding: 6px 8px;
-    white-space: nowrap;
+  button {
+    font-size: 1.1rem;
   }
 }
